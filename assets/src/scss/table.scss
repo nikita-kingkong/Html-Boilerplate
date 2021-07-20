@@ -1,0 +1,61 @@
+.table {
+	background-color: $white;
+	border-radius: 5px;
+
+	tr {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+		th,
+		td {
+			width: 20%;
+			padding: 10px;
+			vertical-align: middle;
+			border-top: none;
+			@include media-breakpoint-up(md) {
+				padding: 20px;
+			}
+			img.icon,
+			svg.icon {
+				max-width: 20px;
+				@include media-breakpoint-up(md) {
+					max-width: 30px;
+				}
+			}
+			&.first-column {
+				width: 40%;
+			}
+
+			&.active-cell {
+				position: relative;
+				background-color: $bg-table-active-color;
+				i {
+					color: $white;
+				}
+			}
+		}
+
+		th,
+		&:last-child td {
+			&.active-cell:before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				background-color: $bg-table-active-color;
+				left: 0;
+				height: 40px;
+			}
+		}
+		&:last-child td.active-cell:before {
+			bottom:-30px;
+			border-radius: 0 0 10px 10px;
+		}
+		
+		th {
+			&.active-cell {
+				&:before {
+					top:-30px;
+					border-radius: 10px 10px 0 0;
+				}
+			}
+		}
+	}
+}

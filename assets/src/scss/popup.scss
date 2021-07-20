@@ -1,0 +1,33 @@
+body.modal-open {
+	height: 100vh;
+	overflow-y: hidden;
+
+	.modal {
+		background: rgba(0,0,0,.8);
+		.modal-dialog {
+			max-width: 90%;
+			@include media-breakpoint-up(md) {
+				max-width: 700px;
+			}
+		}
+		.modal-dialog,
+		.modal-content {
+			height: 80%;
+		}
+
+		.modal-body {
+			overflow-y: scroll;
+		}
+
+		.close {
+			top: 10px;
+			right: 10px;
+			z-index: 999;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			background-color: white;
+			border-radius: 50%;
+		}
+	}
+}

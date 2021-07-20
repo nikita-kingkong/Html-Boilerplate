@@ -1,0 +1,118 @@
+
+/*progressbar*/
+#progressbar {
+	display: flex;
+	margin: 30px 0;
+	counter-reset: step;
+	padding-left: 0px;
+	li {
+		position: relative;
+		flex: 1;
+		color: white;
+
+		// Progressbar Steps
+		&::before {
+			content: counter(step);
+			counter-increment: step;
+			position: relative;
+			z-index: 2;
+			display: block;
+			width: 5rem;
+			margin: 0 auto;
+			border-radius: 50%;
+			font-size: 2rem;
+			line-height: 5rem;
+			font-weight: 600;
+			color: #676767;
+			background: #f3f3f3;
+		}
+
+		/*progressbar connectors*/
+		&::after {
+			content: '';
+			width: 100%;
+			height: 5px;
+			background: #f3f3f3;
+			position: absolute;
+			left: -50%;
+			top: 2.5rem;
+			z-index: 1; /*put it behind the numbers*/
+		}
+
+		&:first-child:after {
+			content: none; 
+		}
+
+		/*marking active/completed steps red*/
+		&.active:before, &.active:after {
+			background: $primary;
+			color: #fff;
+		}
+	}
+}
+
+#questionnaire form {
+	margin-bottom: 100px;
+
+	fieldset,
+	._form_element,
+	.form-group,
+	.infusion-field {
+		/*stacking fieldsets above each other*/
+		position: absolute;
+		padding: 6%;
+		width: 100%;
+		border-radius: 30px;
+		box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
+
+		/*Hide all except first fieldset*/
+		&:not(:first-of-type) {
+			visibility: hidden;
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+	// Custom Radio button & Select
+	.infusion-option,
+	._checkbox-radio {
+
+		input[type=radio],
+		input[type=checkbox]  {
+			display: none;
+			visibility: hidden;
+			width: 0;
+			margin: 0;
+			padding: 0;
+		
+			&:checked + label {
+				background: rgba($primary, .5)
+			  }
+		}
+	
+		label {
+			max-width: 200px;
+			margin: 16px;
+			padding: 20px 10px;
+			border-radius: 6px;
+			color: #fff;
+			background: $primary;
+			cursor: pointer;
+			transition: .4s ease;
+			user-select: none;
+
+			&:hover,
+			&:active,
+			&.active {
+				background: rgba($primary, .8);
+				color: #fff;
+			}
+		}
+	}
+}
+
+/* next buttons */
+input.previous,
+button.previous,
+input.next,
+button.next {
+}

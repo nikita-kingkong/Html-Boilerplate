@@ -1,0 +1,39 @@
+@import 'variables'; // Change these defaults to match your page style
+@import 'vendor/bootstrap/bootstrap';
+@import 'vendor/swiper-bundle.min.css.scss';
+@import 'mixins';
+
+// Comment these out if you're not using the following elements. All are enabled by default...
+
+/* purgecss start ignore */
+@import 'swiper-slider'; // Default swiper styles
+/* purgecss end ignore */
+
+// Default Styles
+/* purgecss start ignore */
+@import 'typography';
+@import 'global';
+@import 'header';
+@import 'footer';
+@import 'home';
+@import 'button';
+@import 'form';
+@import 'checklist';
+@import 'animation';
+@import 'accordion';
+@import 'steps';
+@import 'table';
+@import 'countdown-timer';
+@import 'flipclock-timer';
+@import 'product';
+@import 'popup';
+
+// Additional Pages
+// @import 'ebook-page';
+
+// @import 'thank-you-page';
+
+// @import 'multi-step-form';
+// @import 'questionnaire-page';
+
+/* purgecss end ignore */

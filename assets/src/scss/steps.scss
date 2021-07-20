@@ -1,0 +1,14 @@
+#steps-block {
+    .step {
+        background: white;
+        box-shadow: -47px 58px 136px 0 rgba(0,0,0,.09);
+        &-number {
+            background: $primary;
+            color: #fff;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            border-radius: 50%;
+        }
+    }
+}

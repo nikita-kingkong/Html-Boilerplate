@@ -1,0 +1,52 @@
+header {
+    padding: 15px;
+    background-color: transparent;
+    &.scrolled {
+        box-shadow: -3px -3px 6px 8px rgba(0,0,0,.05);
+        background-color: $headerbg;
+        transition: 0.2s ease-in-out;
+    }
+}
+
+.header-logo img {
+    transition: 0.2s ease-in-out;
+    // Inverts the logo colour. You could use the filter options to modify a transparent png logo for the different colour header bg.
+    // filter: invert(1);
+
+    // Default to small scrolled size on mobile 
+    width: $header-scrolled-width;
+
+    // Turn on the header resize on desktop
+    @include media-breakpoint-up(md) {
+        width: $header-starting-width;
+    }
+    .scrolled & {
+        // filter: none;
+        // Turn on the header resize on desktop
+        @include media-breakpoint-up(md) {
+            width: $header-scrolled-width;
+        }
+    }
+}
+
+.header-phone {
+    line-height: 1.2; 
+
+    .phone-icon {
+        img,
+        svg {
+            max-width: 35px;
+            width: 100%;
+        }
+    }
+
+    // Got questions (if it exists)
+    // span {
+        
+    // }
+    // Phone number text
+    em {
+        font-style: normal;
+        font-weight: bold;
+    }
+} 

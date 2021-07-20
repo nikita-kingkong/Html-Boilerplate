@@ -1,0 +1,46 @@
+// --------------------
+// VARIABLES
+//---------------------
+
+$headerheight   : 150px;  // Change to approximate header height - adds padding to first section
+$header-starting-width: 280px;
+$header-scrolled-width: 200px;
+
+// Colors
+$body-color		: #000000;
+$primary        : #42c7b3;
+$secondary      : #333;
+// $success:       $green;
+// $info:          $cyan;
+// $warning:       $yellow;
+// $danger:        $red;
+// $light:         $gray-100;
+// $dark:          $gray-800;
+
+$headerbg       : #fff; // Header scrolled background color.
+
+$bg-table-active-color : #42c7b3;
+
+$slider-title-color : #ffffff;
+$slick-dot-color : #ffffff;
+$slick-active-dot-color : #42c7b3;
+
+// --------------------
+// Container Options
+//---------------------
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+);
+  
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1140px,
+	xxl: 1600px,
+);
